@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TH-Bot | Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Full-page layout split between left logo and right login form -->
+  <div class="header">
+    <div class="left-section">
+      <img src="assets/TH-Bot Logo Design.png" class="tbot-logo" alt="T-Bot Logo" />
+    </div>
+    <div class="right-section">
+      <img src="assets/logo-dark.png" class="techhub-logo" alt="Technical Hub Logo" />
+      <div class="login-form-container" id="login-form">
+        <h2>Login to TH-Bot</h2>
+        <input type="text" id="username" placeholder="Email or Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <a href="#" class="forgot">Forgot Password?</a>
+        <button onclick="login()">Login</button>
+    
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

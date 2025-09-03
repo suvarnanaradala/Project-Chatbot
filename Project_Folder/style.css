@@ -1,0 +1,291 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #c3e0e5, #f5f7fa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Header Split Layout */
+.header {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Logo Side */
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tbot-logo {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+.tbot-logo:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Technical Hub Logo */
+.techhub-logo {
+  position: absolute;
+  top: 30px;
+  right: 200px;
+  height: 100px; /* Increased from 64px to 100px */
+  width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin-bottom: 1rem;
+}
+.techhub-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Login Form */
+.login-form-container {
+  width: 500px;
+  background: linear-gradient(135deg, #ffffffcc, #e9f4ffcc);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: shine 4s infinite alternate;
+  position: relative;
+
+  margin: 80px auto 0 auto; /* moves down and centers horizontally */
+}
+
+
+.login-form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-form-container input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+
+.login-form-container button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(45deg, #5fa8d3, #84c5f4);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.login-form-container button:hover {
+  background: linear-gradient(45deg, #4d9fd1, #76b8ea);
+}
+
+.login-form-container .forgot {
+  display: block;
+  text-align: right;
+  margin-bottom: 1rem;
+  color: #0077cc;
+  text-decoration: none;
+}
+.login-form-container .forgot:hover {
+  text-decoration: underline;
+}
+
+.login-form-container p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.login-form-container p span {
+  color: #0077cc;
+}
+
+/* Shine Effect */
+@keyframes shine {
+  from { box-shadow: 0 0 10px #fff, 0 0 20px #5fa8d3; }
+  to { box-shadow: 0 0 20px #5fa8d3, 0 0 30px #84c5f4; }
+}
+
+/* Hidden Class */
+.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+}
+
+/* --- Chatbot Styling: Do Not Change --- */
+.chatbot-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 90vh;
+  background: #f5faff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.chat-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-history {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  background: #D3D3D3;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 1.2rem;
+  max-width: 80%;
+  padding: 1rem;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #dbe7ff;
+  color: #1a4c7a;
+  border-bottom-right-radius: 0;
+  text-align: right;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #e8efff;
+  color: #4e5948;
+  border-bottom-left-radius: 0;
+  text-align: left;
+}
+
+#chat-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #fff;
+  border-top: 1px solid #ccc;
+}
+
+#user-input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 0.6rem;
+  resize: none;
+  font-size: 1rem;
+  height: 2.5rem;
+  resize: none; /* Prevent resizing */
+  overflow: hidden; /* Hide scrollbar */
+}
+
+
+.bot-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes waveHi {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-10px) rotate(-5deg); }
+  50%  { transform: translateY(-15px) rotate(5deg); }
+  75%  { transform: translateY(-10px) rotate(-5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.bot-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  animation: waveHi 1s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+/* Responsive Stack for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left-section, .right-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .tbot-logo {
+    margin-bottom: 1rem;
+  }
+}
+
+#send-btn {
+  background-color: #2c3e50; /* dark slate blue */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#send-btn:hover {
+  background-color: #34495e; /* slightly lighter on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#send-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
