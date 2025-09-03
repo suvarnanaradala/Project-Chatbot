@@ -1,0 +1,25 @@
+<!-- chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TH-Bot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chatbot-container">
+    <div class="chat-main">
+      <div id="chat-history" class="chat-history"></div>
+      <div id="chat-input">
+        <textarea id="user-input" placeholder="Type Here ..." rows="1"></textarea>
+        
+        <button onclick="sendMessage()" id="send-btn">Send</button>
+      </div>
+    </div>
+    <div class="bot-image">
+      <img src="assets/robot.png" alt="Chatbot" />
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
